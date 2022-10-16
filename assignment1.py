@@ -34,7 +34,7 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """
     TODO: Write this implementation
     """
-    steps = step % arr.length()
+    steps = steps % arr.length()
     i, j = 0, arr.length() -1
     while i < j:
         arr[i], arr[j] = arr[j], arr[i]
