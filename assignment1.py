@@ -28,16 +28,24 @@ def reverse(arr: StaticArray) -> None:
         end_index = end_index - 1
 
 
-
-
-
-
 # ------------------- PROBLEM 2 - ROTATE ------------------------------------
 
 def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """
     TODO: Write this implementation
     """
+    for i in range(0, steps):
+        temp = arr[0]  # saving First element in temp variable
+        for j in range(0, len(arr) - 1):  # shift remaining array elements one by one
+            arr[j] = arr[j + 1]
+
+        arr.length() - 1 == temp
+    return arr
+
+
+
+
+
     pass
 
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
