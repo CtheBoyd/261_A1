@@ -28,8 +28,7 @@ def reverse(arr: StaticArray) -> None:
         end_index = end_index - 1
 
 
-    reverse(arr)
-    print(arr)
+
 
 
 
