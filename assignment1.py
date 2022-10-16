@@ -5,7 +5,7 @@
 # Due Date:
 # Description:
 
-a
+
 import random
 from static_array import *
 
@@ -16,7 +16,22 @@ def reverse(arr: StaticArray) -> None:
     """
     TODO: Write this implementation
     """
-    pass
+
+
+    start_index = 0
+
+    end_index = arr.length() - 1
+
+    while end_index > start_index:
+        arr[start_index], arr[end_index] = arr[end_index], arr[start_index]
+        start_index = start_index + 1
+        end_index = end_index - 1
+
+
+    reverse(arr)
+    print(arr)
+
+
 
 # ------------------- PROBLEM 2 - ROTATE ------------------------------------
 
@@ -28,51 +43,57 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
 
-def sa_range(start: int, end: int) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
+# def sa_range(start: int, end: int) -> StaticArray:
+#     """
+#     TODO: Write this implementation
+#     """
+#
+    pass
+#
+# # ------------------- PROBLEM 4 - IS_SORTED ---------------------------------
+#
+# def is_sorted(arr: StaticArray) -> int:
+#     """
+#     TODO: Write this implementation
+#     """
+
+    pass
+#
+# # ------------------- PROBLEM 5 - FIND_MODE -----------------------------------
+#
+# def find_mode(arr: StaticArray) -> (int, int):
+#     """
+#     TODO: Write this implementation
+#     """
+
+    pass
+#
+# # ------------------- PROBLEM 6 - REMOVE_DUPLICATES -------------------------
+#
+# def remove_duplicates(arr: StaticArray) -> StaticArray:
+#     """
+#     TODO: Write this implementation
+#     """
+
+    pass
+#
+# # ------------------- PROBLEM 7 - COUNT_SORT --------------------------------
+#
+# def count_sort(arr: StaticArray) -> StaticArray:
+#     """
+#     TODO: Write this implementation
+#     """
+
+    pass
+#
+# # ------------------- PROBLEM 8 - SORTED SQUARES ---------------------------
+#
+# def sorted_squares(arr: StaticArray) -> StaticArray:
+#     """
+#     TODO: Write this implementation
+#     """
     pass
 
-# ------------------- PROBLEM 4 - IS_SORTED ---------------------------------
-
-def is_sorted(arr: StaticArray) -> int:
-    """
-    TODO: Write this implementation
-    """
-    pass
-
-# ------------------- PROBLEM 5 - FIND_MODE -----------------------------------
-
-def find_mode(arr: StaticArray) -> (int, int):
-    """
-    TODO: Write this implementation
-    """
-    pass
-
-# ------------------- PROBLEM 6 - REMOVE_DUPLICATES -------------------------
-
-def remove_duplicates(arr: StaticArray) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
-
-# ------------------- PROBLEM 7 - COUNT_SORT --------------------------------
-
-def count_sort(arr: StaticArray) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
-
-# ------------------- PROBLEM 8 - SORTED SQUARES ---------------------------
-
-def sorted_squares(arr: StaticArray) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
 
 # ------------------- BASIC TESTING -----------------------------------------
 

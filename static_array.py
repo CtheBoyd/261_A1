@@ -4,7 +4,7 @@
 #               are available to the StaticArray. Also, see the __main__ block
 #               at the bottom for some tips on how to use the StaticArray.
 
-a
+
 class StaticArrayException(Exception):
     """
     Custom exception for Static Array class.
