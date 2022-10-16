@@ -34,22 +34,35 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """
     TODO: Write this implementation
     """
-    last = arr
-    count = 1
-    while last.next:
-        count += 1
-        last = last.next
+    steps = steps % arr.length()
+    i, j = 0, arr.length() -1
+    while i < j:
+        arr[i], arr[j] = arr[j], arr[i]
+        i,j = i + 1, j - 1
 
-    last.next = arr
-    curr = arr
+    i, j = 0, steps - 1
+    while i < j:
+        arr[i], arr[j] = arr[j], arr[i]
+        i, j = i + 1, j - 1
 
-    for _ in range(count - (steps % count) - 1):
-        curr = curr.next
+    i, j = steps, arr.length() -1
+    while i < j:
+        arr[i], arr[j] = arr[j], arr[i]
+        i,j = i + 1, j - 1
 
-    res = curr.next
-    curr.next = None
 
-    return res
+
+    # for i in range(0, steps):
+    #     temp = arr[0]  # saving First element in temp variable
+    #
+    #
+    #     for j in range(0, arr.length() - 1):  # shift remaining array elements one by one
+    #         arr[j] = arr[j + 1]
+    #
+    #     arr.length() - 1 == temp
+    # return arr
+
+
 
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
 
