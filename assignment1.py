@@ -45,10 +45,6 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 
 
 
-
-
-    pass
-
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
 
 # def sa_range(start: int, end: int) -> StaticArray:
