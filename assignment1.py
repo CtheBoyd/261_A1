@@ -37,7 +37,7 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     for i in range(0, steps):
         temp = arr[0]  # saving First element in temp variable
         for l in range(l<0, arr.length() + 1):
-            arr[j] = arr[j - 1]
+            arr[l] = arr[l - 1]
             for j in range(0, arr.length() - 1):  # shift remaining array elements one by one
                 arr[j] = arr[j + 1]
 
