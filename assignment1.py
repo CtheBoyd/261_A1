@@ -34,11 +34,12 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """
     TODO: Write this implementation
     """
+
     for i in range(arr.length()):
-        arr.set(i, value)
+        arr.set(i, steps )
     print(arr)
     for steps in [1, 2, 0, -1, -2, 28, -100, 2 ** 28, -2 ** 31]:
-        space = i + 1 if steps >= 0 else i - 1
+        space = (steps + 1 if steps >= 0 else steps - 1)
         print(f'{rotate(arr, steps)} {space}{steps}')
     print(arr)
 
