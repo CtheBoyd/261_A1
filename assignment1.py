@@ -38,7 +38,7 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
         arr.set(i, value)
     print(arr)
     for steps in [1, 2, 0, -1, -2, 28, -100, 2 ** 28, -2 ** 31]:
-        space = [i + 1] if steps >= 0 else [i - 1]
+        space = i + 1 if steps >= 0 else i - 1
         print(f'{rotate(arr, steps)} {space}{steps}')
     print(arr)
 
