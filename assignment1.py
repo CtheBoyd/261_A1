@@ -35,15 +35,21 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     TODO: Write this implementation
     """
 
-    for i in range(arr.length()):
-        arr.set(i, steps )
-    print(arr)
-    for steps in [1, 2, 0, -1, -2, 28, -100, 2 ** 28, -2 ** 31]:
-        space = (steps + 1 if steps >= 0 else steps - 1)
-        print(f'{rotate(arr, steps)} {space}{steps}')
-    print(arr)
+    steps = steps % arr.length()
+    l, r = 0, arr.length() - 1
+    while l < r:
+        arr[l], arr[r] = arr[r], arr[l]
+        l, r = l + 1, r - 1
 
+    l, r = 0, steps - 1
+    while l < r:
+        arr[l], arr[r] = arr[r], arr[l]
+        l, r = l + 1, r - 1
 
+    l, r = steps, arr.length() - 1
+    while l < r:
+        arr[l], arr[r] = arr[r], arr[l]
+        l, r = l + 1, r - 1
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
 
 # def sa_range(start: int, end: int) -> StaticArray:
