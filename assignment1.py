@@ -59,19 +59,38 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
 
-# def sa_range(start: int, end: int) -> StaticArray:
+def sa_range(start: int, end: int) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
-    # input of two integers begining and end (1,6)
-    # returns [1,2,3,4,5,6]
+    # input of two integers start and end (1,6)
+    # returns [1,2,3,4,5,6] in new array
+
+    # start = x
+    # end = y
+    # new arr[]
+    # add x to arr
+    # x + 1 add to arr
+    # x + 1 add to arr
+    # x + 1 add to arr
+    # x + 1 add to arr
+    # if i in arr.length() = y
+    # print(new arr)
+
+    arr = StaticArray(arr.length())
+
+    while start < end:
+        arr[start + 1]
+
+    print(arr)
+
 
     # cases = [(1, 3), (-1, 2), (0, 0), (0, -3),(-95, -89), (-89, -95)]
     # for start, end in cases:
     #   print(f”Start: {start: 4}, End: {end: 4}, {sa_range(start, end)}”)
 
 #
-    pass
+
 #
 # # ------------------- PROBLEM 4 - IS_SORTED ---------------------------------
 #
@@ -128,6 +147,19 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 #     TODO: Write this implementation
 #     """
 
+    # receive acending or descending array
+    # return new array with duplicates removed
+
+    #test_cases = (
+#   [1], [1, 2], [1, 1, 2], [1, 20, 30, 40, 500, 500, 500],[5, 5, 5, 4, 4, 3, 2, 1, 1], [1, 1, 1, 1, 2, 2, 2, 2])
+#   for case in test_cases:
+#       arr = StaticArray(len(case))
+#       for i, value in enumerate(case):
+#           arr[i] = value
+#       print(arr)
+#       print(remove_duplicates(arr))
+#   print(arr
+
     pass
 #
 # # ------------------- PROBLEM 7 - COUNT_SORT --------------------------------
@@ -136,6 +168,20 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
+    # receives array, returns new array in descending order, using count sort algarithm
+    #
+    #test_cases = (
+#   [1, 2, 4, 3, 5], [5, 4, 3, 2, 1], [0, -5, -3, -4, -2, -1, 0],[-3, -2, -1, 0, 1, 2, 3], [1, 2, 3, 4, 3, 2, 1, 5, 5, 2, 3, 1],[10100, 10721,10320, 10998], [-100320, -100450, -100999, -100001],
+#   )
+#   for case in test_cases:
+#       arr = StaticArray(len(case))
+#       for i, value in enumerate(case):
+#           arr[i] = value
+#       before = arr if len(case) < 50 else 'Started sorting large array'
+#       print(f”Before: {before}”)
+#       result = count_sort(arr)
+#       after = result if len(case) < 50 else 'Finished sorting large array'
+#       print(f”After: {after}”)
 
     pass
 #
@@ -145,6 +191,18 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
+    # receive array in sorted order
+    # return new array with values squared in ascending order
+    #
+    #test_cases = ([1, 2, 3, 4, 5],[-5, -4, -3, -2, -1, 0],[-3, -2, -2, 0, 1, 2, 3],)
+    #for case in test_cases:
+    #    arr = StaticArray(len(case))
+    #for i, value in enumerate(sorted(case)):
+    #    arr[i] = value
+    #print(arr)
+    #result = sorted_squares(arr)
+    #print(result)
+
     pass
 
 
