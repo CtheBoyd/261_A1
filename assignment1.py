@@ -37,6 +37,10 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     # Create a new StaticArray object - is the default size
     arr = StaticArray(arr.length())
     steps = steps % arr.length()
+
+    for i in range(arr.length()):
+        arr[i] = i + 1
+
     l, r = 0, arr.length() - 1
     while l < r:
         arr[l], arr[r] = arr[r], arr[l]
@@ -51,6 +55,8 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     while l < r:
         arr[l], arr[r] = arr[r], arr[l]
         l, r = l + 1, r - 1
+
+
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
 
 # def sa_range(start: int, end: int) -> StaticArray:
