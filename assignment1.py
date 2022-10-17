@@ -34,11 +34,11 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """
     TODO: Write this implementation
     """
-    source = [int(x) for x in range(-20, 20, 7)]
+    arr = [int(x) for x in range(-20, 20, 7)]
     result
     for i in range(arr.length()):
         if i+k < arr.length():
-            result[i+k] = source[i]
+            result[i+k] = arr[i]
 
 
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
