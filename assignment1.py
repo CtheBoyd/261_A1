@@ -38,7 +38,7 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     arr = StaticArray(arr.length())
     steps = steps % arr.length()
 
-    new_arr = [arr]
+    new_arr = arr.length()
     for i in range(new_arr):
         new_arr[i] = i + 1
 
