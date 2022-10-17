@@ -38,7 +38,7 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     result
     for i in range(arr.length()):
         if i+k < arr.length():
-            result[i+k] = arr[i]
+            result[i+1] = arr[i]
 
 
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
