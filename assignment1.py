@@ -34,7 +34,8 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """
     TODO: Write this implementation
     """
-
+    # Create a new StaticArray object - is the default size
+    arr = StaticArray(arr.length())
     steps = steps % arr.length()
     l, r = 0, arr.length() - 1
     while l < r:
@@ -56,6 +57,9 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
+
+    #input of two integers begiining and end (1,6)
+    #returns [1,2,3,4,5,6]
 #
     pass
 #
@@ -65,6 +69,8 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
+    # receives array and returns an integer (1, -1, 0)
+    # 1 is
 
     pass
 #
