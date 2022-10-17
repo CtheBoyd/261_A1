@@ -34,11 +34,13 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """
     TODO: Write this implementation
     """
-    arr = [int(x) for x in range(-20, 20, 7)]
+    arr = [x for x in range(-20, 20, 7)]
     result
     for i in range(arr.length()):
-        if i+k < arr.length():
-            result[i+1] = arr[i]
+        if i + steps < arr.length():
+            result[i + steps] = arr[i]
+        else:
+            n_index = (i + steps)
 
 
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
