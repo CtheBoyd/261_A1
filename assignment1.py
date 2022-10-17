@@ -38,23 +38,22 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     arr = StaticArray(arr.length())
     steps = steps % arr.length()
 
-    new_arr = arr.length()
-    for i in range(new_arr):
-        new_arr[i] = i + 1
+    for i in range(arr):
+        arr[0] = arr.get(0)
 
-    l, r = 0, new_arr.length() - 1
+    l, r = 0, arr.length() - 1
     while l < r:
-        new_arr[l], new_arr[r] = new_arr[r], new_arr[l]
+        arr[l], arr[r] = arr[r], arr[l]
         l, r = l + 1, r - 1
 
     l, r = 0, steps - 1
     while l < r:
-        new_arr[l], new_arr[r] = new_arr[r], new_arr[l]
+        arr[l], arr[r] = arr[r], arr[l]
         l, r = l + 1, r - 1
 
-    l, r = steps, new_arr.length() - 1
+    l, r = steps, arr.length() - 1
     while l < r:
-        new_arr[l], new_arr[r] = new_arr[r], new_arr[l]
+        arr[l], arr[r] = arr[r], arr[l]
         l, r = l + 1, r - 1
 
 
@@ -64,9 +63,13 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
+    # input of two integers begining and end (1,6)
+    # returns [1,2,3,4,5,6]
 
-    #input of two integers begiining and end (1,6)
-    #returns [1,2,3,4,5,6]
+    # cases = [(1, 3), (-1, 2), (0, 0), (0, -3),(-95, -89), (-89, -95)]
+    # for start, end in cases:
+    #   print(f”Start: {start: 4}, End: {end: 4}, {sa_range(start, end)}”)
+
 #
     pass
 #
@@ -77,8 +80,20 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 #     TODO: Write this implementation
 #     """
     # receives array and returns an integer (1, -1, 0)
-    # 1 is
+    # 1 if array ascending sort
+    #-1 if decending sort
+    # 0 otherwise
+    # single element = ascending
+    # set new arr.
 
+    # test_cases = ([-100, -8, 0, 2, 3, 10, 20, 100],['A', 'B', 'Z', 'a', 'z'], ['Z', 'T', 'K', 'A', '5'],[1, 3, -10, 20, -30, 0],[-10, 0, 0, 10, 20, 30],[100, 90, 0, -90, -200],['apple'])
+    # for case in test_cases:
+    #   arr = StaticArray(len(case))
+    #   for i, value in enumerate(case):
+    #       arr[i] = value
+    #   result = is_sorted(arr)
+    #   space = “  ” if result and result >= 0 else “ ”
+    #   print(f”Result:{space}{result}, {arr}”)
     pass
 #
 # # ------------------- PROBLEM 5 - FIND_MODE -----------------------------------
@@ -87,6 +102,22 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
+    # take ascending or descending arr.
+    # return mode then frequency.
+    # if more than 1 high freq, select 1st
+    # set new arr?
+
+    #test_cases = (
+    # [1, 20, 30, 40, 500, 500, 500],[2, 2, 2, 2, 1, 1, 1, 1],["zebra", "sloth", "otter", "otter", "moose", "koala"],["Albania", "Belgium", "Chile", "Denmark", "Egypt", "Fiji"])
+    # for case in test_cases:
+    #   arr = StaticArray(len(case))
+    #   for i, value in enumerate(case):
+    #       arr[i] = value
+    #   result = find_mode(arr)
+    #   if result:
+    #       print(f"{arr}\nMode: {mode}, Frequency: {frequency}\n")
+    #   else:
+    #       print(“find_mode() not yet implemented”)
 
     pass
 #
