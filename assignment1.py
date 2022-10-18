@@ -85,10 +85,10 @@ def sa_range(start: int, end: int) -> StaticArray:
                 arr = arr.set(index,start)
 
             elif index > 0 and index < arr.length() - 1:
-                arr = arr.append(index, start + 1)
+                arr = arr.set(index, start + 1)
 
             else:
-                arr = arr.append(index, end)
+                arr = arr.set(index, end)
 
     print(arr)
 
