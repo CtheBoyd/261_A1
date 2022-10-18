@@ -78,15 +78,17 @@ def sa_range(start: int, end: int) -> StaticArray:
 
     arr = StaticArray(end - start + 1)  # sets
 
-    while index < arr.length()-1:
-        if index == 0:
-            arr = arr.set(index,start)
+    for index in range(arr.length()):
 
-        elif index > 0 and index < arr.length() - 1:
-            arr = arr.set(index, start + 1)
+        while index < arr.length()-1:
+            if index == 0:
+                arr = arr.set(index,start)
 
-        else:
-            arr = arr.set(index, end)
+            elif index > 0 and index < arr.length() - 1:
+                arr = arr.set(index, start + 1)
+
+            else:
+                arr = arr.set(index, end)
 
     print(arr)
 
