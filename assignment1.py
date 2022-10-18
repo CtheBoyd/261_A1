@@ -1,9 +1,9 @@
-# Name:
-# OSU Email:
+# Name: Christopher Boyd
+# OSU Email: boydc3@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: Assignment 1
+# Due Date: 10/17/2022
+# Description: Array Manipulation with time complexity. I'm still very weak with my pseudocode and python writing, I'm get better, but I still need a lot of extra help.
 
 
 import random
@@ -16,8 +16,6 @@ def reverse(arr: StaticArray) -> None:
     """
     TODO: Write this implementation
     """
-
-
     start_index = 0
 
     end_index = arr.length() - 1
@@ -35,25 +33,16 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     TODO: Write this implementation
     """
     # Create a new StaticArray object - is the default size
-    arr = StaticArray(arr.length())
+    arr = StaticArray(arr.length())  #creates a new arr
+    steps = []
+    for index in range(arr):
+        if steps > 0:
+            rotate(arr) + steps
+        elif steps < 0:
+            rotate(arr) - steps
+    return arr
 
-    for i in range(arr):
-        arr[0] = arr.get(0)
-        arr[i] = arr.set(i, steps)
-    l, r = 0, arr.length() - 1
-    while l < r:
-        arr[l], arr[r] = arr[r], arr[l]
-        l, r = l + 1, r - 1
 
-    l, r = 0, steps - 1
-    while l < r:
-        arr[l], arr[r] = arr[r], arr[l]
-        l, r = l + 1, r - 1
-
-    l, r = steps, arr.length() - 1
-    while l < r:
-        arr[l], arr[r] = arr[r], arr[l]
-        l, r = l + 1, r - 1
 
 
 # ------------------- PROBLEM 3 - SA_RANGE ----------------------------------
@@ -65,30 +54,21 @@ def sa_range(start: int, end: int) -> StaticArray:
     # input of two integers start and end (1,6)
     # returns [1,2,3,4,5,6] in new array
 
-    # start = x
-    # end = arr.length() - 1
-    # new arr[]
-    # add x to arr
-    # if i < arr.length() - 1
-    # x + 1 add to arr
-    # if i < arr.length() - 1
-    # x + 1 add to arr
-    # if i in arr.length() = y
-    # print(new arr)
-
     arr = StaticArray(end - start + 1)  # creates new array with x length
 
     for index in range(start, end):
 
         while index < arr.length()-1:
             if index == 0:
-                arr = arr.set(index,start)
+                # add start number to index 0
 
             elif index > 0 and index < arr.length() - 1:
-                arr = arr.set(index, start + 1)
+                # +1 to start number in next index position.
+                # +1 to current number in previous index.
 
             else:
-                arr = arr.set(index, end)
+                # last index position add end number
+                # list is ready to print
 
     print(arr)
 
@@ -102,16 +82,29 @@ def sa_range(start: int, end: int) -> StaticArray:
 #
 # # ------------------- PROBLEM 4 - IS_SORTED ---------------------------------
 #
-# def is_sorted(arr: StaticArray) -> int:
+ def is_sorted(arr: StaticArray) -> int:
 #     """
 #     TODO: Write this implementation
 #     """
     # receives array and returns an integer (1, -1, 0)
     # 1 if array ascending sort
-    #-1 if decending sort
+    #-1 if descending sort
     # 0 otherwise
     # single element = ascending
     # set new arr.
+
+    arr = StaticArray(test_cases)   # creates new array for the test cases
+
+    for case in range(arr(test_cases)):
+        if index 0 > 1 and 1 > arr.length-1:
+            return -1
+        elif index 0 < 1 and 1 < arr.legnth-1:
+            return 1
+        elif index 0 == (populated):
+            return 1
+        else:
+            return 0
+
 
     # test_cases = ([-100, -8, 0, 2, 3, 10, 20, 100],['A', 'B', 'Z', 'a', 'z'], ['Z', 'T', 'K', 'A', '5'],[1, 3, -10, 20, -30, 0],[-10, 0, 0, 10, 20, 30],[100, 90, 0, -90, -200],['apple'])
     # for case in test_cases:
@@ -121,18 +114,26 @@ def sa_range(start: int, end: int) -> StaticArray:
     #   result = is_sorted(arr)
     #   space = “  ” if result and result >= 0 else “ ”
     #   print(f”Result:{space}{result}, {arr}”)
-    pass
-#
+
 # # ------------------- PROBLEM 5 - FIND_MODE -----------------------------------
 #
-# def find_mode(arr: StaticArray) -> (int, int):
+def find_mode(arr: StaticArray) -> (int, int):
 #     """
 #     TODO: Write this implementation
 #     """
+
     # take ascending or descending arr.
     # return mode then frequency.
     # if more than 1 high freq, select 1st
     # set new arr?
+
+    arr = StaticArray(test_cases)    # creates new array for the test cases
+
+    for case in range(arr(test_cases)):
+        # compare items in index positions
+        # duplicates are returned as mode
+        # duplicates are counted, total returned
+
 
     #test_cases = (
     # [1, 20, 30, 40, 500, 500, 500],[2, 2, 2, 2, 1, 1, 1, 1],["zebra", "sloth", "otter", "otter", "moose", "koala"],["Albania", "Belgium", "Chile", "Denmark", "Egypt", "Fiji"])
@@ -146,17 +147,30 @@ def sa_range(start: int, end: int) -> StaticArray:
     #   else:
     #       print(“find_mode() not yet implemented”)
 
-    pass
+
 #
 # # ------------------- PROBLEM 6 - REMOVE_DUPLICATES -------------------------
 #
-# def remove_duplicates(arr: StaticArray) -> StaticArray:
+def remove_duplicates(arr: StaticArray) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
 
     # receive acending or descending array
     # return new array with duplicates removed
+
+    arr = StaticArray(test_cases)    # creates new array for the test cases
+
+    for case in range(arr(test_cases)):
+        # search index positions for duplicates
+        if item = arr(item):
+            delete item
+        elif item != arr(item):
+            #add item to arr and move to next item
+        return #arr sans duplicates
+        # if item already exists in arr, skip or delete item and move on
+        # return new arr without duplicates
+
 
     #test_cases = (
 #   [1], [1, 2], [1, 1, 2], [1, 20, 30, 40, 500, 500, 500],[5, 5, 5, 4, 4, 3, 2, 1, 1], [1, 1, 1, 1, 2, 2, 2, 2])
@@ -168,16 +182,29 @@ def sa_range(start: int, end: int) -> StaticArray:
 #       print(remove_duplicates(arr))
 #   print(arr
 
-    pass
+
 #
 # # ------------------- PROBLEM 7 - COUNT_SORT --------------------------------
 #
-# def count_sort(arr: StaticArray) -> StaticArray:
+def count_sort(arr: StaticArray) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
     # receives array, returns new array in descending order, using count sort algarithm
     #
+
+    arr = StaticArray(test_cases)  # creates new array for the test cases
+
+    for case in range(arr(test_cases)):
+        for index pos number in arr
+            if index pos number <= new number
+                #new number added to next position
+            elif index pos number >= new number
+                #move current number right one index position and insert new number in old index pos
+
+        return #new arr
+
+
     #test_cases = (
 #   [1, 2, 4, 3, 5], [5, 4, 3, 2, 1], [0, -5, -3, -4, -2, -1, 0],[-3, -2, -1, 0, 1, 2, 3], [1, 2, 3, 4, 3, 2, 1, 5, 5, 2, 3, 1],[10100, 10721,10320, 10998], [-100320, -100450, -100999, -100001],
 #   )
@@ -191,17 +218,31 @@ def sa_range(start: int, end: int) -> StaticArray:
 #       after = result if len(case) < 50 else 'Finished sorting large array'
 #       print(f”After: {after}”)
 
-    pass
+
 #
 # # ------------------- PROBLEM 8 - SORTED SQUARES ---------------------------
 #
-# def sorted_squares(arr: StaticArray) -> StaticArray:
+def sorted_squares(arr: StaticArray) -> StaticArray:
 #     """
 #     TODO: Write this implementation
 #     """
     # receive array in sorted order
     # return new array with values squared in ascending order
     #
+    arr = StaticArray(test_cases)  # creates new array for the test cases
+
+    for case in range(arr(test_cases)):
+         if index[0] < arr.length() - 1
+        #   take index pos number ** 2 add to arr
+         elif index[0] < arr.length() - 1
+        #    reverse(case) in new arr and run new arr back through
+
+     return #new arr for each case with index pos number squared and arr in ascending order
+        #
+
+
+
+
     #test_cases = ([1, 2, 3, 4, 5],[-5, -4, -3, -2, -1, 0],[-3, -2, -2, 0, 1, 2, 3],)
     #for case in test_cases:
     #    arr = StaticArray(len(case))
@@ -211,7 +252,7 @@ def sa_range(start: int, end: int) -> StaticArray:
     #result = sorted_squares(arr)
     #print(result)
 
-    pass
+
 
 
 # ------------------- BASIC TESTING -----------------------------------------
