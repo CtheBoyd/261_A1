@@ -182,9 +182,9 @@ def sorted_squares(arr: StaticArray) -> StaticArray:
     arr = StaticArray(test_cases)  # creates new array for the test cases
 
     for case in range(arr(test_cases)):
-         if index[0] < arr.length() - 1:
+         if index_pos_number < arr.length() - 1:
         #   take index pos number ** 2 add to arr
-         elif index[0] < arr.length() - 1:
+         elif index_pos_number < arr.length() - 1:
         #    reverse(case) in new arr and run new arr back through
 
      return #new arr for each case with index pos number squared and arr in ascending order
