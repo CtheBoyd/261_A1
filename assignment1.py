@@ -78,7 +78,7 @@ def sa_range(start: int, end: int) -> StaticArray:
 
     arr = StaticArray(end - start + 1)  # creates new array with x length
 
-    for index in range(arr.length()):
+    for index in range(start, end):
 
         while index < arr.length()-1:
             if index == 0:
