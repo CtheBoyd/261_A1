@@ -76,7 +76,7 @@ def sa_range(start: int, end: int) -> StaticArray:
     # if i in arr.length() = y
     # print(new arr)
 
-    arr = StaticArray(end - start + 1)  # sets
+    arr = StaticArray(end - start + 1)  # creates new array with x length
 
     for index in range(arr.length()):
 
@@ -85,21 +85,12 @@ def sa_range(start: int, end: int) -> StaticArray:
                 arr = arr.set(index,start)
 
             elif index > 0 and index < arr.length() - 1:
-                arr = arr.set(index, start + 1)
+                arr = arr.append(index, start + 1)
 
             else:
-                arr = arr.set(index, end)
+                arr = arr.append(index, end)
 
     print(arr)
-
-
-
-
-
-
-
-
-
 
 
     # cases = [(1, 3), (-1, 2), (0, 0), (0, -3),(-95, -89), (-89, -95)]
