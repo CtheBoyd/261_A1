@@ -37,9 +37,9 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     steps = []
     for index in range(arr):
         if steps > 0:
-            rotate(arr) + steps
+            rotate(arr) by + steps  #rotate right when positive int
         elif steps < 0:
-            rotate(arr) - steps
+            rotate(arr) by + steps  #rotate left when negative int  x + (-5) => x - 5
     return arr
 
 
@@ -54,7 +54,7 @@ def sa_range(start: int, end: int) -> StaticArray:
     # input of two integers start and end (1,6)
     # returns [1,2,3,4,5,6] in new array
 
-    arr = StaticArray(end - start + 1)  # creates new array with x length
+    arr = StaticArray(end - start + 1)  # creates new array of x length
 
     for index in range(start, end):
 
@@ -129,10 +129,18 @@ def find_mode(arr: StaticArray) -> (int, int):
 
     arr = StaticArray(test_cases)    # creates new array for the test cases
 
+    freq = 0
     for case in range(arr(test_cases)):
-        # compare items in index positions
-        # duplicates are returned as mode
-        # duplicates are counted, total returned
+        if item not in arr(case):
+            add item to arr
+
+        elif item in arr(case):
+             add item to arr and add item to item.temp() and freq + 1
+             mode = #highest occurrence of item based on freq.
+        return mode
+        return freq
+    return mode and freq
+
 
 
     #test_cases = (
