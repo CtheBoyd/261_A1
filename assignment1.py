@@ -37,10 +37,10 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
     steps = []
     for index in range(arr):
         if steps > 0:
-            rotate(arr) by + steps  #rotate right when positive int
+            rotate(arr)  + steps  #rotate right when positive int
         elif steps < 0:
-            rotate(arr) by + steps  #rotate left when negative int  x + (-5) => x - 5
-    return arr
+            rotate(arr)  + steps  #rotate left when negative int  x + (-5) => x - 5
+    return arr #rotated
 
 
 
@@ -63,26 +63,20 @@ def sa_range(start: int, end: int) -> StaticArray:
                 # add start number to index 0
 
             elif index > 0 and index < arr.length() - 1:
-                # +1 to start number in next index position.
-                # +1 to current number in previous index.
+                # shift start number to next index position.
+                # add new item to former start number index.
 
             else:
                 # last index position add end number
-                # list is ready to print
+                # arr is ready to print
 
     print(arr)
 
 
-    # cases = [(1, 3), (-1, 2), (0, 0), (0, -3),(-95, -89), (-89, -95)]
-    # for start, end in cases:
-    #   print(f”Start: {start: 4}, End: {end: 4}, {sa_range(start, end)}”)
-
-#
-
 #
 # # ------------------- PROBLEM 4 - IS_SORTED ---------------------------------
 #
- def is_sorted(arr: StaticArray) -> int:
+def is_sorted(arr: StaticArray) -> int:
 #     """
 #     TODO: Write this implementation
 #     """
@@ -96,7 +90,7 @@ def sa_range(start: int, end: int) -> StaticArray:
     arr = StaticArray(test_cases)   # creates new array for the test cases
 
     for case in range(arr(test_cases)):
-        if index 0 > 1 and 1 > arr.length-1:
+        if index  0 > 1 and 1 > arr.length-1:
             return -1
         elif index 0 < 1 and 1 < arr.legnth-1:
             return 1
@@ -104,16 +98,7 @@ def sa_range(start: int, end: int) -> StaticArray:
             return 1
         else:
             return 0
-
-
-    # test_cases = ([-100, -8, 0, 2, 3, 10, 20, 100],['A', 'B', 'Z', 'a', 'z'], ['Z', 'T', 'K', 'A', '5'],[1, 3, -10, 20, -30, 0],[-10, 0, 0, 10, 20, 30],[100, 90, 0, -90, -200],['apple'])
-    # for case in test_cases:
-    #   arr = StaticArray(len(case))
-    #   for i, value in enumerate(case):
-    #       arr[i] = value
-    #   result = is_sorted(arr)
-    #   space = “  ” if result and result >= 0 else “ ”
-    #   print(f”Result:{space}{result}, {arr}”)
+    return # return the return
 
 # # ------------------- PROBLEM 5 - FIND_MODE -----------------------------------
 #
@@ -140,22 +125,6 @@ def find_mode(arr: StaticArray) -> (int, int):
         return mode
         return freq
     return mode and freq
-
-
-
-    #test_cases = (
-    # [1, 20, 30, 40, 500, 500, 500],[2, 2, 2, 2, 1, 1, 1, 1],["zebra", "sloth", "otter", "otter", "moose", "koala"],["Albania", "Belgium", "Chile", "Denmark", "Egypt", "Fiji"])
-    # for case in test_cases:
-    #   arr = StaticArray(len(case))
-    #   for i, value in enumerate(case):
-    #       arr[i] = value
-    #   result = find_mode(arr)
-    #   if result:
-    #       print(f"{arr}\nMode: {mode}, Frequency: {frequency}\n")
-    #   else:
-    #       print(“find_mode() not yet implemented”)
-
-
 #
 # # ------------------- PROBLEM 6 - REMOVE_DUPLICATES -------------------------
 #
@@ -172,23 +141,10 @@ def remove_duplicates(arr: StaticArray) -> StaticArray:
     for case in range(arr(test_cases)):
         # search index positions for duplicates
         if item = arr(item):
-            delete item
+            return delete item
         elif item != arr(item):
-            #add item to arr and move to next item
-        return #arr sans duplicates
-        # if item already exists in arr, skip or delete item and move on
-        # return new arr without duplicates
-
-
-    #test_cases = (
-#   [1], [1, 2], [1, 1, 2], [1, 20, 30, 40, 500, 500, 500],[5, 5, 5, 4, 4, 3, 2, 1, 1], [1, 1, 1, 1, 2, 2, 2, 2])
-#   for case in test_cases:
-#       arr = StaticArray(len(case))
-#       for i, value in enumerate(case):
-#           arr[i] = value
-#       print(arr)
-#       print(remove_duplicates(arr))
-#   print(arr
+            return #add item to arr and move to next item
+    return #arr sans duplicates
 
 
 #
@@ -205,26 +161,12 @@ def count_sort(arr: StaticArray) -> StaticArray:
 
     for case in range(arr(test_cases)):
         for index pos number in arr
-            if index pos number <= new number
+            if index pos number <= new number:
                 #new number added to next position
-            elif index pos number >= new number
+            elif index pos number >= new number:
                 #move current number right one index position and insert new number in old index pos
 
         return #new arr
-
-
-    #test_cases = (
-#   [1, 2, 4, 3, 5], [5, 4, 3, 2, 1], [0, -5, -3, -4, -2, -1, 0],[-3, -2, -1, 0, 1, 2, 3], [1, 2, 3, 4, 3, 2, 1, 5, 5, 2, 3, 1],[10100, 10721,10320, 10998], [-100320, -100450, -100999, -100001],
-#   )
-#   for case in test_cases:
-#       arr = StaticArray(len(case))
-#       for i, value in enumerate(case):
-#           arr[i] = value
-#       before = arr if len(case) < 50 else 'Started sorting large array'
-#       print(f”Before: {before}”)
-#       result = count_sort(arr)
-#       after = result if len(case) < 50 else 'Finished sorting large array'
-#       print(f”After: {after}”)
 
 
 #
@@ -240,28 +182,13 @@ def sorted_squares(arr: StaticArray) -> StaticArray:
     arr = StaticArray(test_cases)  # creates new array for the test cases
 
     for case in range(arr(test_cases)):
-         if index[0] < arr.length() - 1
+         if index[0] < arr.length() - 1:
         #   take index pos number ** 2 add to arr
-         elif index[0] < arr.length() - 1
+         elif index[0] < arr.length() - 1:
         #    reverse(case) in new arr and run new arr back through
 
      return #new arr for each case with index pos number squared and arr in ascending order
         #
-
-
-
-
-    #test_cases = ([1, 2, 3, 4, 5],[-5, -4, -3, -2, -1, 0],[-3, -2, -2, 0, 1, 2, 3],)
-    #for case in test_cases:
-    #    arr = StaticArray(len(case))
-    #for i, value in enumerate(sorted(case)):
-    #    arr[i] = value
-    #print(arr)
-    #result = sorted_squares(arr)
-    #print(result)
-
-
-
 
 # ------------------- BASIC TESTING -----------------------------------------
 
